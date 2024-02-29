@@ -1,22 +1,27 @@
-pipeline{
+pipeline {
     agent any
-    stages{
-        stage("Pre Build"){
-            steps{
-                echo "This is pre build stage"
+
+    stages {
+        stage('Build') {
+            steps {
+                echo 'Hello from build stage'
+                echo 'Hello from build stage 2'
             }
         }
-        stage("Build Stage"){
-            steps{
-                ehco "This is Build stage"
+        stage('Deploy') {
+            steps {
+                echo 'Hello from deploy stage'
             }
         }
-        stage("Deploy Stage"){
-            steps{
-                ehco "This is Build Stage"
+        stage('Test') {
+            steps {
+                echo 'Hello from test stage'
             }
-        }    
+        }
+        stage('Release') {
+            steps {
+                echo 'Hello from release stage'
+            }
+        }
     }
-
 }
-
