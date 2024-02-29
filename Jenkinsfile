@@ -6,6 +6,8 @@ pipeline {
             steps {
                 echo 'Hello from build stage'
                 echo 'Hello from build stage 2'
+                sh "printenv" 
+                
             }
         }
         stage('Deploy') {
